@@ -1,0 +1,267 @@
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f9fafc;
+    margin: 0;
+    padding: 0;
+}
+
+.floating-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    height: 80px;
+}
+
+.floating-header.solid {
+    background-color: #0066cc; /* Solid blue color when scrolled past 2nd hero */
+}
+
+.floating-header .logo img {
+    max-height: 50px;
+}
+
+.floating-header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+.floating-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px; /* Space between buttons */
+}
+
+.floating-header nav ul li a {
+    color: rgb(4, 247, 36);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 15px 20px; /* Adjust padding to make the button square */
+    border: 2px solid #f8f9fa; /* Optional: Add border to emphasize the square */
+    border-radius: 5px; /* Optional: Round the corners if desired */
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+.floating-header nav ul li a:hover {
+    background-color: #037ef8; /* Add hover effect */
+    color: rgb(9, 250, 81); /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Styling for Why Giowide Solutions Section */
+.why-giowide {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.why-giowide h2 {
+    font-size: 2.5rem;
+    color: #003366; /* Brand color */
+    margin-bottom: 0.5rem;
+}
+
+.why-giowide-line {
+    width: 20%;
+    margin: 0 auto;
+    border: 2px solid #1a237e; /* Dark blue underline */
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('../assets/meeting-594091_1280.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 8rem 0;
+    height: calc(100vh - 70px); /* Adjust the height */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 102, 204, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure the text stays above the overlay */
+    text-align: center;
+    color: white;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+
+/* Info Section Styles */
+.info-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.info-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.info-text h2 {
+    font-size: 2.5rem;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Owners Section */
+.owners-section {
+    text-align: center;
+    margin: 0rem 0;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #1a237e, #00c853); /* Brand gradient */
+    color: #fff;
+}
+
+.owners-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.owners-line {
+    width: 20%;
+    margin: 0.5rem auto 2rem;
+    border: 2px solid #fff;
+}
+
+.owners-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.owner-card {
+    background-color: #ffffff;
+    color: #333;
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.owner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.owner-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #1a237e; /* Dark blue border */
+}
+
+.owner-card h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #1a237e; /* Dark blue text */
+}
+
+.owner-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+.footer-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-height: 50px;
+}
+
+footer {
+    background-color: #0066cc;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a.cta-button {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    background-color: #004d99;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer a.cta-button:hover {
+    background-color: #003366;
+}

@@ -1,0 +1,209 @@
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f9fafc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0066cc;
+    padding: 1rem 2rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    height: 80px;
+  }
+  
+  header.solid {
+    background-color: #0066cc; /* Solid blue color when scrolled past 2nd hero */
+  }
+  
+  header .logo img {
+    max-height: 50px;
+  }
+  
+  header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px; /* Space between buttons */
+  }
+  
+  header nav ul li a {
+    color: rgb(4, 247, 36);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 15px 20px; /* Adjust padding to make the button square */
+    border: 2px solid #f8f9fa; /* Optional: Add border to emphasize the square */
+    border-radius: 5px; /* Optional: Round the corners if desired */
+    transition: background-color 0.3s, transform 0.3s ease;
+  }
+  header nav ul li a:hover {
+    background-color: #037ef8; /* Add hover effect */
+    color: rgb(9, 250, 81); /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+  }
+
+
+
+
+/* Main Content Styling for Services Pages */
+.content-wrapper {
+  display: flex;
+  flex-direction: row; /* Ensures horizontal layout */
+  align-items: flex-start; /* Aligns both image and text at the top */
+  justify-content: flex-start; /* Aligns content to the left */
+  gap: 30px; /* Space between the image and text */
+  max-width: calc(100% - 250px); /* Adjust for the width of the left menu */
+  margin: 100px auto; /* Centers the section below the header */
+  padding: 20px;
+  text-align: left;
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+/* Left Menu Styling */
+.left-menu {
+  position: fixed; /* Fixes the menu to the left */
+  top: 80px; /* Starts right below the header (header height = 80px) */
+  left: 0;
+  width: 250px; /* Set the width of the menu */
+  height: calc(100vh - 80px - 50px); /* Full viewport height minus header and footer heights */
+  background-color: #004080; /* Dark blue background */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Stretch items to fill the menu width */
+  padding: 20px;
+  gap: 15px; /* Space between menu items */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  box-sizing: border-box; /* Include padding in height calculations */
+}
+
+/* Content (text) styling */
+.main-details {
+  max-width: 70%; /* Content takes up 70% of the section width */
+  padding: 10px; /* Optional padding to space out content */
+}
+
+.main-details h1 {
+  font-size: 1.2rem; /* Adjust heading size */
+  margin-bottom: 5px;
+}
+
+.main-details p {
+  font-size: 1.2rem; /* Readable text size */
+  margin-bottom: 20px;
+}
+
+.main-details ul {
+  font-size: 1.1rem;
+  list-style: disc;
+  padding-left: 30px;
+}
+
+
+/* Hero Section for Back to Services Button (Above Footer) */
+.hero-section {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers the button vertically */
+    height: 70px; /* Short height for the hero section */
+    background-color: white; /* Light background color */
+    margin-top: 0px; /* Space above the hero section */
+}
+
+.hero-section .cta-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-section .cta-button:hover {
+    background-color: #004d99;
+}
+
+
+/* Style for the service box */
+.service-box {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.service-header {
+  background-color: #4CAF50; /* Green background for header */
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.service-header h3 {
+  margin: 0;
+}
+
+.arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-details {
+  display: none; /* Initially hidden */
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.service-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.service-details {
+  display: none;
+}
+.service-details.show {
+  display: block;
+}
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #004080; /* Same solid blue color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer .footer-logo img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+footer .footer-info p {
+    margin: 5px 0;
+}

@@ -1,0 +1,266 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial, sans-serif';
+  background-color: #f9fafc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Floating Header */
+.floating-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+  height: 80px;
+}
+
+.floating-header.solid {
+  background-color: #0066cc; /* Solid blue color when scrolled past 2nd hero */
+}
+
+.floating-header .logo img {
+  max-height: 50px;
+}
+
+.floating-header nav {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+.floating-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px; /* Space between buttons */
+}
+
+.floating-header nav ul li a {
+  color: rgb(4, 247, 36);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 15px 20px; /* Adjust padding to make the button square */
+  border: 2px solid #f8f9fa; /* Optional: Add border to emphasize the square */
+  border-radius: 5px; /* Optional: Round the corners if desired */
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.floating-header nav ul li a:hover {
+  background-color: #037ef8; /* Add hover effect */
+  color: rgb(9, 250, 81); /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('../assets/business-4295644_1280.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 8rem 0;
+  height: calc(100vh - 70px); /* Adjust the height */
+}
+
+.hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 102, 204, 0.5); /* Blue overlay with opacity */
+  z-index: 1; /* Keep the overlay behind the text */
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 2; /* Ensure the text stays above the overlay */
+  text-align: center;
+  color: white;
+  padding: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Hero Text Section (New Section Above Hero-2) */
+#hero-text {
+  position: relative;
+  background: linear-gradient(to right, #003366, #4caf50); /* Same gradient */
+  color: white;
+  text-align: center;
+  padding: 8rem 0;
+  height: 50vh; /* Adjust height to fit the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-text .hero-content {
+  position: relative;
+  z-index: 2; /* Ensure it's above the background */
+}
+
+#hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#hero-text p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+/* Hero-2 Section */
+#hero-2 {
+  position: relative;
+  background: white;
+  color: rgb(5, 5, 5);
+  text-align: center;
+  padding: 8rem 0;
+  height: 30vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; /* Prevents overflow issues */
+}
+
+
+
+/* New Section Above Services */
+.services-intro {
+  background-color: #fff; /* White background */
+  text-align: center;
+  padding: 5rem 2rem;
+  margin-bottom: 2rem; /* Space between the intro section and services */
+}
+
+.services-intro h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366; /* Dark blue color */
+  margin-bottom: 20px;
+}
+
+.services-intro p {
+  font-size: 1.2rem;
+  color: #666; /* Light gray text */
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+/* Services Container */
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+/* Service Card Styling */
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Icon Styling */
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+/* Remove underline from anchor tags inside service cards */
+.service-card a {
+  text-decoration: none; /* Remove underline */
+  color:  #007a08;        /* Inherit color from parent, if needed */
+}
+
+/* Service Title */
+.service-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f72004; /* Dark blue color */
+}
+
+
+
+
+/* Footer Section */
+.footer-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  max-height: 50px;
+}
+
+footer {
+  background-color: #0066cc;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a.cta-button {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  background-color: #004d99;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer a.cta-button:hover {
+  background-color: #003366;
+}

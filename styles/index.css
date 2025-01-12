@@ -1,0 +1,587 @@
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f9fafc;
+    margin: 0;
+    padding: 0;
+}
+
+.floating-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    height: 80px;
+}
+
+.floating-header.solid {
+    background-color: #0066cc; /* Solid blue color when scrolled past 2nd hero */
+}
+
+.floating-header .logo img {
+    max-height: 50px;
+}
+
+.floating-header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+.floating-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px; /* Space between buttons */
+}
+
+.floating-header nav ul li a {
+    color: rgb(4, 247, 36);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 15px 20px; /* Adjust padding to make the button square */
+    border: 2px solid #f8f9fa; /* Optional: Add border to emphasize the square */
+    border-radius: 5px; /* Optional: Round the corners if desired */
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+.floating-header nav ul li a:hover {
+    background-color: #037ef8; /* Add hover effect */
+    color: rgb(9, 250, 81); /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Hero Section with Background Image and Overlay */
+.hero {
+    position: relative;
+    background: url('../assets/teamwork-3213924_1280.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 8rem 0;
+    height: calc(100vh - 70px); /* Adjust the height */
+}
+
+.hero .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 102, 204, 0.5); /* Blue overlay with opacity */
+    z-index: 1; /* Keep the overlay behind the text */
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2; /* Ensure the text stays above the overlay */
+    text-align: center;
+    color: white;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #004d99;
+}
+
+.cta-button.small-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+
+/* 2nd Hero Section (Goal Description) */
+.hero + .hero {
+    background: linear-gradient(to right, #003366, #4caf50); /* Dark blue to green gradient */
+    color: #fff;
+    padding: 4rem 2rem; /* Adjust padding */
+    height: auto; /* Ensure the height adjusts to content */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top of the section */
+    flex-direction: column; /* Ensures proper stacking of content */
+    box-sizing: border-box; /* Include padding in dimensions */
+}
+
+/* Goal Section Layout */
+.hero + .hero .goal-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic column layout */
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Goal Block Styling */
+.goal-block {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on the whole card */
+.goal-block:hover {
+    transform: translateY(-10px); /* Hover effect for floating effect */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Goal Block Title (Heading) */
+.goal-title {
+    font-size: 1.8rem; /* Adjusted font size */
+    font-weight: bold;
+    color: #003366; /* Dark blue for titles */
+    margin-bottom: 1rem;
+    text-align: center; /* Center align text */
+}
+
+.goal-title i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Goal Block Text */
+.goal-text {
+    font-size: 1rem; /* Adjusted text size */
+    line-height: 1.5;
+    color: #333; /* Dark gray for text */
+    text-align: center; /* Center align text */
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #003366; /* Dark blue background */
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4caf50; /* Green background on hover */
+    transform: scale(1.05); /* Button grows slightly on hover */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .hero + .hero {
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+        align-items: center; /* Center items vertically for small screens */
+    }
+
+    .hero + .hero .goal-section {
+        grid-template-columns: 1fr; /* Stack the blocks vertically */
+    }
+
+    .goal-title {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+}
+
+
+
+
+
+/* 3rd Hero Section (Reviews/Blogs) */
+.hero + .hero + .hero {
+    background: #f9f9f9; /* Soft background to separate from the rest of the page */
+    color: #333;
+    padding: 4rem 2rem;
+    min-height: 500px; /* Adjusted height for more breathing room */
+    text-align: center;
+  }
+  
+  /* Heading Style */
+  .hero + .hero + .hero h2 {
+    font-size: 2rem; /* Larger font for the heading */
+    color: #003366; /* Dark blue for heading */
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Reviews Container (to enable scrolling effect) */
+  .reviews-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Reviews (carousel container) */
+  .reviews {
+    display: flex;
+    transition: transform 20s linear; /* Smooth transition with a longer duration */
+    animation: slide 60s infinite; /* Infinite sliding with slow speed */
+  }
+  
+  /* Individual Review Cards */
+  .review-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 350px;
+    margin-right: 2rem;
+    text-align: left;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  /* Blockquote Styling */
+  .review-card blockquote {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555; /* Darker text for readability */
+    border-left: 4px solid #003366; /* Dark blue border for emphasis */
+    padding-left: 20px;
+  }
+  
+  /* Client Name Styling */
+  .review-card cite {
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #4caf50; /* Green color for the client's name */
+  }
+  
+  /* Slide Animation for Reviews */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Slide all the way to the left */
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .reviews {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .review-card {
+      max-width: 90%; /* Make cards smaller on mobile */
+    }
+  }
+  
+/* Core Values Section */
+.core-values {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #003366, #4caf50); /* Dark blue to green gradient */
+    color: #fff;
+}
+
+.core-values h2 {
+    font-size: 2rem;
+    color: #fff; /* White text to contrast with the gradient */
+    margin-bottom: 2rem;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.value-box {
+    position: relative;
+    width: 30%;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    padding: 2rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.value-box:hover {
+    background-color: #f6f9ff; /* Light blue background */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.value-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #003366; /* Dark blue for the heading */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.value-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.value-box::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: #4caf50; /* Green underline effect */
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.value-box:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Services Section */
+.services-home {
+    background: linear-gradient(to right, #003366, #4caf50); /* Dark blue to green gradient */
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #fff; /* White text for contrast */
+}
+
+.services-home h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff; /* Ensure heading is visible against the gradient */
+}
+
+/* Grid Layout for Services */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px 20px; /* Spacing between cards */
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+/* Service Card Container */
+.service-item {
+    position: relative;
+    perspective: 1000px; /* Enable 3D effect for flip */
+    width: 100%;
+    height: 350px; /* Adjust height for better visual balance */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    animation: shadow-lift 0.6s ease-out forwards; /* Lift effect */
+    opacity: 0; /* Start invisible for entry animation */
+    overflow: hidden; /* Prevent overflow issues */
+    z-index: 0; /* Prevent overlapping issues */
+}
+
+/* Service Card Inner Structure */
+.service-item-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    transition: transform 0.6s ease-in-out;
+    border-radius: 8px;
+}
+
+/* Front and Back Common Styles */
+.service-item-front,
+.service-item-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center; /* Align text consistently */
+    border-radius: 8px;
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+/* Front Side of Card */
+.service-item-front {
+    background-color: rgba(6, 50, 247, 0.9); /* Dark blue */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: white; /* Ensure text color is white for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Space out the elements evenly */
+    padding: 1rem 1.5rem;
+}
+
+/* Text Styling for Front Card */
+.service-item-front h3 {
+    font-size: 1.8rem; /* Adjust heading size */
+    font-weight: bold; /* Make the service name stand out */
+    margin-bottom: 1rem; /* Add space below the heading */
+    text-align: center; /* Center align the heading */
+    line-height: 1.4; /* Better spacing between lines */
+    max-width: 85%; /* Restrict heading width for better alignment */
+}
+
+.service-item-front p {
+    font-size: 1.1rem; /* Adjusted font size for better readability */
+    line-height: 1.6; /* Line spacing for readability */
+    margin: 0; /* Remove default margin */
+    max-width: 90%; /* Restrict paragraph width for a clean layout */
+    align-self: center; /* Center align text */
+}
+
+/* Back Side of Card */
+.service-item-back {
+    background-color: #4caf50; /* Green */
+    color: white;
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 1rem; /* Padding for spacing */
+    text-align: center; /* Ensure text is centered */
+    height: 100%; /* Ensure back card fills the entire container */
+    width: 100%; /* Ensure proper alignment within the card */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Button on Back of Card */
+.service-item-back button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #fff;
+    color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.service-item-back button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Flip Effect on Hover */
+.service-item:hover .service-item-inner {
+    transform: rotateY(180deg);
+    z-index: 1; /* Ensure flipped card is on top */
+}
+
+/* Animation for Lift Effect */
+@keyframes shadow-lift {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .service-item {
+        height: 280px; /* Adjust height for smaller screens */
+    }
+
+    .service-item-front h3 {
+        font-size: 1.4rem; /* Adjust heading size for smaller screens */
+    }
+
+    .service-item-front p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+
+
+
+.footer-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-height: 50px;
+}
+
+footer {
+    background-color: #0066cc;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a.cta-button {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    background-color: #004d99;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer a.cta-button:hover {
+    background-color: #003366;
+}
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
