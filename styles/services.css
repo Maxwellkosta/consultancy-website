@@ -1,5 +1,4 @@
-/* General Body Styling */
-body {
+ybody {
   font-family: 'Arial, sans-serif';
   background-color: #f9fafc;
   margin: 0;
@@ -44,6 +43,10 @@ body {
   gap: 40px; /* Space between buttons */
 }
 
+.floating-header nav ul li {
+  position: relative; /* Ensure dropdown menu positions relative to parent */
+}
+
 .floating-header nav ul li a {
   color: rgb(4, 247, 36);
   text-decoration: none;
@@ -60,6 +63,138 @@ body {
   background-color: #037ef8; /* Add hover effect */
   color: rgb(9, 250, 81); /* Change text color on hover */
   transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Dropdown Styling */
+.floating-header nav ul li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position it below the parent button */
+  left: 0;
+  background-color: #004e92; /* Darker shade of blue for dropdown */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  z-index: 100;
+  width: 250px; /* Slightly wider dropdown */
+  padding: 10px 0; /* Add padding to prevent text from touching edges */
+}
+
+.floating-header nav ul li .dropdown li {
+  width: 100%; /* Ensure dropdown items span the full width */
+}
+
+.floating-header nav ul li .dropdown a {
+  display: block;
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: normal; /* Normal font weight for dropdown links */
+  padding: 12px 20px; /* Add more padding for better click area */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  border-bottom: 1px solid #333; /* Thin border between items */
+}
+
+.floating-header nav ul li .dropdown a:hover {
+  background-color: #037ef8; /* Hover effect for dropdown items */
+  color: rgb(9, 250, 81); /* Match hover text color */
+  transform: scale(1.05); /* Slight zoom effect for hover */
+}
+/* Highlight last item */
+.floating-header nav ul li .dropdown li:last-child a {
+  border-bottom: none; /* Remove the bottom border from the last item */
+}
+
+/* Show Dropdown on Hover */
+.floating-header nav ul li:hover .dropdown {
+  display: block; /* Show dropdown menu when hovered */
+}
+
+/* Enhanced Dropdown for Home Button */
+.floating-header nav ul li .dropdown-home {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent button */
+  left: 0;
+  background-color: #004e92; /* Same background as the Services dropdown */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  z-index: 100;
+  width: 200px; /* Slightly narrower dropdown */
+  padding: 10px 0;
+}
+
+/* Dropdown Items for Home */
+.floating-header nav ul li .dropdown-home li {
+  width: 100%;
+}
+
+.floating-header nav ul li .dropdown-home a {
+  display: block;
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: normal;
+  padding: 12px 20px; /* Adequate padding for clickable area */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-bottom: 1px solid #333; /* Border to separate items */
+}
+
+/* Hover Effects for Home Dropdown */
+.floating-header nav ul li .dropdown-home a:hover {
+  background-color: #037ef8; /* Hover effect: Blue */
+  color: #ffffff; /* Keep text white on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Highlight last item */
+.floating-header nav ul li .dropdown-home li:last-child a {
+  border-bottom: none; /* No border for the last item */
+}
+
+/* Show Dropdown on Hover */
+.floating-header nav ul li:hover .dropdown-home {
+  display: block; /* Show dropdown-home menu when hovered */
+}
+
+/* Contact Info Styling */
+.contact-info {
+  display: flex;
+  align-items: center; /* Align vertically */
+  gap: 20px; /* Space between the items */
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  color: #faf7f7;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info p i {
+  margin-right: 10px;
+  color: #2ad607;
+}
+
+/* Adjust size and padding for contact info in the header */
+.floating-header .contact-info {
+  font-size: 1.1rem; /* Slightly smaller text for a compact view */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .floating-header {
+    flex-direction: column; /* Stack elements on small screens */
+  }
+
+  .floating-header .contact-info {
+    margin-top: 10px; /* Add space between the nav and contact info */
+  }
+
+  .floating-header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 /* Hero Section */

@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "node scripts/script.js"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1"
+  }
+}

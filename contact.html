@@ -13,25 +13,52 @@
   <header id="header" class="floating-header">
     <div class="logo">
       <a href="index.html">
-        <img src="assets/1234.png" alt="Company Logo" />
+        <img src="assets/1234.png" alt="Company Logo">
       </a>
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li>
+          <a href="index.html">Home</a>
+          <!-- Dropdown Menu for Home -->
+          <ul class="dropdown-home">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="services.html">Services</a>
+          <!-- Dropdown Menu for Services -->
+          <ul class="dropdown">
+            <li><a href="Audit, Risks and Assurance.html">Audit, Risks, and Assurance</a></li>
+            <li><a href="Accounting services.html">Accounting Services</a></li>
+            <li><a href="Tax management.html">Tax Management</a></li>
+            <li><a href="BUSINESS AND MANAGEMENT ADVISORY.html">Business and Management Advisory</a></li>
+            <li><a href="training.html">Training</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav> 
+    </nav>
+    <!-- Contact Info added here -->
+     <div class="contact-info">
+    <p><i class="fas fa-phone-alt"></i> +254 728 880 617</p>
+    <p><i class="fas fa-envelope"></i> inform@giowidesolutions.com</p>
+     </div>
   </header>
+  
 
   <!-- Hero Section -->
   <section id="hero-1" class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Our Consultancy Services</h1>
-      <p>We are a team of experts dedicated to providing personalized consultancy services to businesses.</p>
+      <h1>Contact us today!</h1>
+      <p>Ready to take your business to the next level? Contact us today to discover how our solutions can
+        revolutionize your operations and propel your business to the next level.</p>
     </div>
   </section>
 
@@ -42,7 +69,7 @@
       <div class="contact-form">
         <h2>Contact Us</h2>
         <p>We’d love to hear from you! Please fill out the form below or reach out using the contact details provided.</p>
-        <form action="#" method="post">
+        <form id="contact-form" action="#" method="post">
           <div class="form-group">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -58,9 +85,9 @@
           <button type="submit" class="cta-button">Send Message</button>
         </form>
       </div>
-
+      
       <!-- Get in Touch Section -->
-      <div class="contact-info">
+      <div class="contact-infos">
         <h2>Get in Touch</h2>
         <hr>
         <p><i class="fas fa-phone-alt"></i> +254 728 880 617</p>
@@ -74,6 +101,7 @@
         <p>
           <a href="https://www.linkedin.com/in/owen-kibunja" target="_blank">
             <i class="fab fa-linkedin" style="font-size: 36px; color: #0077B5;"></i>
+          </a> 
         </p>
       </div>
     </div>
@@ -92,6 +120,10 @@
     <p>&copy; 2024 Consultancy Agency. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
   <script src="scripts/script.js"></script>
+
 </body>
 </html>

@@ -58,7 +58,137 @@ body {
     color: rgb(9, 250, 81); /* Change text color on hover */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
   }
+ /* Dropdown Styling */
+.floating-header nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it below the parent button */
+    left: 0;
+    background-color: #004e92; /* Darker shade of blue for dropdown */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    z-index: 100;
+    width: 250px; /* Slightly wider dropdown */
+    padding: 10px 0; /* Add padding to prevent text from touching edges */
+}
 
+.floating-header nav ul li .dropdown li {
+    width: 100%; /* Ensure dropdown items span the full width */
+}
+
+.floating-header nav ul li .dropdown a {
+    display: block;
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: normal; /* Normal font weight for dropdown links */
+    padding: 12px 20px; /* Add more padding for better click area */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    border-bottom: 1px solid #333; /* Thin border between items */
+}
+
+.floating-header nav ul li .dropdown a:hover {
+    background-color: #037ef8; /* Hover effect for dropdown items */
+    color: rgb(9, 250, 81); /* Match hover text color */
+    transform: scale(1.05); /* Slight zoom effect for hover */
+}
+/* Highlight last item */
+.floating-header nav ul li .dropdown li:last-child a {
+    border-bottom: none; /* Remove the bottom border from the last item */
+}
+
+/* Show Dropdown on Hover */
+.floating-header nav ul li:hover .dropdown {
+    display: block; /* Show dropdown menu when hovered */
+}
+
+/* Enhanced Dropdown for Home Button */
+.floating-header nav ul li .dropdown-home {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the parent button */
+    left: 0;
+    background-color: #004e92; /* Same background as the Services dropdown */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 100;
+    width: 200px; /* Slightly narrower dropdown */
+    padding: 10px 0;
+}
+
+/* Dropdown Items for Home */
+.floating-header nav ul li .dropdown-home li {
+    width: 100%;
+}
+
+.floating-header nav ul li .dropdown-home a {
+    display: block;
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding: 12px 20px; /* Adequate padding for clickable area */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-bottom: 1px solid #333; /* Border to separate items */
+}
+
+/* Hover Effects for Home Dropdown */
+.floating-header nav ul li .dropdown-home a:hover {
+    background-color: #037ef8; /* Hover effect: Blue */
+    color: #ffffff; /* Keep text white on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Highlight last item */
+.floating-header nav ul li .dropdown-home li:last-child a {
+    border-bottom: none; /* No border for the last item */
+}
+
+/* Show Dropdown on Hover */
+.floating-header nav ul li:hover .dropdown-home {
+    display: block; /* Show dropdown-home menu when hovered */
+}
+
+/* Contact Info Styling */
+.contact-info {
+    display: flex;
+    align-items: center; /* Align vertically */
+    gap: 20px; /* Space between the items */
+  }
+  
+  .contact-info p {
+    font-size: 1.2rem;
+    color: #faf7f7;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info p i {
+    margin-right: 10px;
+    color: #2ad607;
+  }
+  
+  /* Adjust size and padding for contact info in the header */
+  .floating-header .contact-info {
+    font-size: 1.1rem; /* Slightly smaller text for a compact view */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .floating-header {
+      flex-direction: column; /* Stack elements on small screens */
+    }
+  
+    .floating-header .contact-info {
+      margin-top: 10px; /* Add space between the nav and contact info */
+    }
+  
+    .floating-header nav ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
 
 
 
@@ -78,21 +208,58 @@ body {
 
 /* Left Menu Styling */
 .left-menu {
-  position: fixed; /* Fixes the menu to the left */
-  top: 80px; /* Starts right below the header (header height = 80px) */
-  left: 0;
   width: 250px; /* Set the width of the menu */
-  height: calc(100vh - 80px - 50px); /* Full viewport height minus header and footer heights */
   background-color: #004080; /* Dark blue background */
   color: white;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* Stretch items to fill the menu width */
-  padding: 20px;
-  gap: 15px; /* Space between menu items */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  overflow-y: auto; /* Enable scrolling if content overflows */
-  box-sizing: border-box; /* Include padding in height calculations */
+  gap: 20px; /* Space between menu items */
+  box-sizing: border-box;
+}
+
+/* Menu Item Styling */
+.left-menu a {
+  display: block; /* Ensures links are full-width */
+  padding: 15px 20px;
+  background-color: #006605; /* Darker background for each link */
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+  border-radius: 10px; /* Rounded corners */
+  text-decoration: none; /* Remove underlines from links */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect */
+.left-menu a:hover {
+  background-color: #026910; /* Change background on hover */
+  transform: translateX(5px); /* Slight shift to the right on hover */
+}
+
+/* CTA Box Styling */
+.cta-box {
+  margin-top: auto; /* Pushes the CTA box to the bottom */
+  padding: 15px;
+  background-color: #0066cc; /* Blue background for the CTA box */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  align-items: center; /* Centers the button vertically */
+}
+
+.cta-box a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none; /* Remove underline */
+  background-color: #004d99; /* Darker blue */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-box a:hover {
+  background-color: #003366; /* Change on hover */
 }
 
 /* Content (text) styling */
@@ -115,6 +282,13 @@ body {
   font-size: 1.1rem;
   list-style: disc;
   padding-left: 30px;
+}
+.advisory-image {
+  width: 150%; /* Adjust as needed */
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -143,17 +317,27 @@ body {
 }
 
 
-/* Style for the service box */
-.service-box {
-  width: 100%;
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
+/* Service List Grid Layout */
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create two equal columns */
+  gap: 20px; /* Add space between the columns and rows */
+  padding: 20px;
 }
 
+/* Style for the service boxes */
+.service-box {
+  width: 100%;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header style */
 .service-header {
-  background-color: #4CAF50; /* Green background for header */
+  background-color: #4CAF50;
   color: white;
   padding: 15px;
   display: flex;
@@ -170,26 +354,15 @@ body {
   transition: transform 0.3s ease;
 }
 
-.service-details {
-  display: none; /* Initially hidden */
-  padding: 15px;
-  background-color: #f9f9f9;
-}
-
-.service-details ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
+/* Details section */
 .service-details {
   display: none;
+  padding: 15px;
+  background-color: #f9f9f9;
 }
 .service-details.show {
   display: block;
 }
-
-
-
-
 /* Footer Styling */
 footer {
     background-color: #004080; /* Same solid blue color */

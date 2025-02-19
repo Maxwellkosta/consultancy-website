@@ -14,22 +14,47 @@
 </head>
 <body>
 
-  <!-- Header Section with Logo and Navigation -->
-<header id="header" class="floating-header">
-  <div class="logo">
-    <a href="index.html">
-      <img src="assets/1234.png" alt="Company Logo">
-    </a>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header id="header" class="floating-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/1234.png" alt="Company Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+          <!-- Dropdown Menu for Home -->
+          <ul class="dropdown-home">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="services.html">Services</a>
+          <!-- Dropdown Menu for Services -->
+          <ul class="dropdown">
+            <li><a href="Audit, Risks and Assurance.html">Audit, Risks, and Assurance</a></li>
+            <li><a href="Accounting services.html">Accounting Services</a></li>
+            <li><a href="Tax management.html">Tax Management</a></li>
+            <li><a href="BUSINESS AND MANAGEMENT ADVISORY.html">Business and Management Advisory</a></li>
+            <li><a href="training.html">Training</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Contact Info added here -->
+     <div class="contact-info">
+    <p><i class="fas fa-phone-alt"></i> +254 728 880 617</p>
+    <p><i class="fas fa-envelope"></i> inform@giowidesolutions.com</p>
+     </div>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </header>
 
   <!-- Hero Section with Background Image and Overlay -->
 <section class="hero" id="hero-1">
@@ -52,7 +77,7 @@
         <hr class="Introduction-line">
         <p class="goal-text">
           Giowide Solutions is an Accounting, Management, and Consulting firm registered in Kenya. The firm
-          offers professional management, accounting, business advisory services, and other related but
+          offers Professional management, Accounting, Business Advisory Services, and other related but
           important business services that inspire growth and sustainability in organizations.
           <br><br>
           Our client base extends from private enterprises, not-for-profit organizations, and other corporates to
@@ -63,16 +88,16 @@
         <h2 class="goal-title"><i class="icon-mission"></i> Our Mission</h2>
         <hr class="Our-Mission-line">
         <p class="goal-text">
-          At Giowide Solutions, our goal is to provide our clients with relevant and exceptional accounting, tax, financial, 
-          and practical business growth solutions through our experienced professional team using current technology and methodologies.
+          At Giowide Solutions, our goal is to provide our clients with relevant and exceptional Accounting, Tax, Financial, 
+          and Practical business growth solutions through our experienced professional team using current Technology and Methodologies.
         </p>
       </div>
       <div class="goal-block">
         <h2 class="goal-title"><i class="icon-vision"></i> Our Vision</h2>
         <hr class="Our-Vision-line">
         <p class="goal-text">
-          To be the global consulting powerhouse of choice; offering audit, tax, accountancy, and other financial
-          and strategic management consultancy services.
+          To be the global consulting powerhouse of choice; offering Audit, Tax, Accountancy, and other Financial
+          and Strategic Management Consultancy Services.
         </p>
         <a href="about.html" class="cta-button">Learn more about us today!</a>
       </div>
@@ -285,6 +310,21 @@
 </section>
 
 
+<section class="contact-section">
+  <div class="contact-content">
+      <span class="contact-title">GOT SOME QUESTIONS?</span>
+      <hr class="GOT-SOME-QUESTIONS?-line">
+      <h2>For inquiries or to explore our range of services, feel free to reach out! <br>We’d be delighted to meet you in person and discuss how we can help your business thrive.</h2>
+      <a href="contact.html" class="contact-btn">Contact Us →</a>
+  </div>
+  <div class="contact-image">
+      <img src="assets/consulting-3813576_1280.jpg" alt="Customer Support">
+  </div>
+</section>
+
+
+
+
   <!-- Footer Section -->
   <footer>
     <div class="footer-logo">
@@ -318,7 +358,7 @@
   </script>
 
   <!-- External Script -->
-  <script src="scripts/script.js"></script>
+  <script src="scripts/script.js" defer></script>
 
 </body>
 </html>

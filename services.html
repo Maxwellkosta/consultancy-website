@@ -8,7 +8,6 @@
 </head>
 <body class="fade-in"> <!-- Add fade-in class to body -->
 
-  <!-- Header Section with Logo and Navigation -->
   <header id="header" class="floating-header">
     <div class="logo">
       <a href="index.html">
@@ -17,12 +16,38 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li>
+          <a href="index.html">Home</a>
+          <!-- Dropdown Menu for Home -->
+          <ul class="dropdown-home">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="services.html">Services</a>
+          <!-- Dropdown Menu for Services -->
+          <ul class="dropdown">
+            <li><a href="Audit, Risks and Assurance.html">Audit, Risks, and Assurance</a></li>
+            <li><a href="Accounting services.html">Accounting Services</a></li>
+            <li><a href="Tax management.html">Tax Management</a></li>
+            <li><a href="BUSINESS AND MANAGEMENT ADVISORY.html">Business and Management Advisory</a></li>
+            <li><a href="training.html">Training</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <!-- Contact Info added here -->
+     <div class="contact-info">
+      <p><i class="fas fa-phone-alt"></i> +254 728 880 617</p>
+      <p><i class="fas fa-envelope"></i> inform@giowidesolutions.com</p>
+     </div>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </header>
 
   <!-- Hero Section (Same style and layout as index.html) -->
@@ -45,35 +70,35 @@
 
   <!-- Services Section -->
   <section class="services-container">
-    <!-- Corporate Finance & Strategy Card -->
-    <div class="service-card"id="corporate-finance-&-strategy-card">
-      <a href="corporate-finance-&-strategy.html">
-        <img src="assets/1.png" alt="Corporate Finance & Strategy " class="service-icon">
-        <h2 id="corporate-finance-&-strategy">Corporate Finance & Strategy</h2>
+    <!-- Audit, Risks and Assurance Card -->
+    <div class="service-card"id="Audit, Risks and Assurance-card">
+      <a href="Audit, Risks and Assurance.html">
+        <img src="assets/1.png" alt="Audit, Risks and Assurance" class="service-icon">
+        <h2 id="Audit, Risks and Assurance">Audit, Risks and Assurance</h2>
       </a>
     </div>
 
-    <!-- Accounting & Management Advisory Services Card -->
-    <div class="service-card"id="accounting-&-management-advisory-services-Card">
-      <a href="accounting-&-management-advisory-services.html">
-        <img src="assets/2.png" alt="Accounting & Management Advisory Services Icon" class="service-icon">
-        <h2 id="accounting-&-management-advisory-services">Accounting & Management Advisory Services</h2>
+    <!-- Accounting Services Card -->
+    <div class="service-card"id="Accounting-services-Card">
+      <a href="Accounting services.html">
+        <img src="assets/2.png" alt="Accounting servicesIcon" class="service-icon">
+        <h2 id="Accounting-services">Accounting services</h2>
       </a>
     </div>
 
     <!-- Tax Services Card -->
     <div class="service-card"id="tax-services-Card">
-      <a href="tax-services.html">
-        <img src="assets/3.png" alt="Tax Services Icon" class="service-icon">
-        <h2 id="tax-services">Tax Services</h2>
+      <a href="Tax management.html">
+        <img src="assets/3.png" alt="Tax management Icon" class="service-icon">
+        <h2 id="tax-services">Tax management</h2>
       </a>
     </div>
 
-    <!-- Audit & Assurance Services Card -->
-    <div class="service-card" id="audit-&-assurance-services-card">
-      <a href="audit-&-assurance-services.html">
-        <img src="assets/4.png" alt="Audit & Assurance Services Icon" class="service-icon">
-        <h2 id="audit-&-assurance-services">Audit & Assurance Services</h2>
+    <!-- BUSINESS AND MANAGEMENT ADVISORY Card -->
+    <div class="service-card" id="BUSINESS-AND-MANAGEMENT-ADVISORY.html-card">
+      <a href="BUSINESS AND MANAGEMENT ADVISORY.html">
+        <img src="assets/4.png" alt="BUSINESS AND MANAGEMENT ADVISORY Icon" class="service-icon">
+        <h2 id="BUSINESS-AND-MANAGEMENT-ADVISORY">BUSINESS AND MANAGEMENT ADVISORY</h2>
       </a>
     </div>
 
@@ -103,6 +128,6 @@
     <p>&copy; 2024 Consultancy Agency. All rights reserved.</p>
   </footer>
 
-  <script src="scripts/script.js"></script>
+  <script src="scripts/script.js" defer></script>
 </body>
 </html>

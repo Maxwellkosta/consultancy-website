@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- Header Section (Same as index.html) -->
   <header id="header" class="floating-header">
     <div class="logo">
       <a href="index.html">
@@ -18,27 +17,50 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li>
+          <a href="index.html">Home</a>
+          <!-- Dropdown Menu for Home -->
+          <ul class="dropdown-home">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="services.html">Services</a>
+          <!-- Dropdown Menu for Services -->
+          <ul class="dropdown">
+            <li><a href="Audit, Risks and Assurance.html">Audit, Risks, and Assurance</a></li>
+            <li><a href="Accounting services.html">Accounting Services</a></li>
+            <li><a href="Tax management.html">Tax Management</a></li>
+            <li><a href="BUSINESS AND MANAGEMENT ADVISORY.html">Business and Management Advisory</a></li>
+            <li><a href="training.html">Training</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <!-- Contact Info added here -->
+     <div class="contact-info">
+    <p><i class="fas fa-phone-alt"></i> +254 728 880 617</p>
+    <p><i class="fas fa-envelope"></i> inform@giowidesolutions.com</p>
+     </div>
   </header>
+  
 
   <!-- Hero Section (Same style and layout as index.html) -->
   <section id="hero-1" class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>• Customer centric & Integrity • Innovation • Diversity • Teamwork </h1>
-      <p> With a commitment to excellence,
-        innovation, and client success, we at Giowide Solutions
-        are dedicated to delivering tailored solutions that drive
-        growth and elevate your business to new heights.</p>
-      
+        <h1>• Customer centric & Integrity • Innovation • Diversity • Teamwork </h1>
+        <p> With a commitment to excellence, innovation, and client success, we at Giowide Solutions
+            are dedicated to delivering tailored solutions that drive growth and elevate your business to new heights.</p>
     </div>
-  </section>
-  
+</section>
+
   <section id="hero-2" class="why-giowide">
     <h2>Why Giowide Solutions?</h2>
     <hr class="why-giowide-line">
@@ -128,7 +150,7 @@
   <p>&copy; 2024 Consultancy Agency. All rights reserved.</p>
 </footer>
 
-  <script src="scripts/script.js"></script>
+<script src="scripts/script.js" defer></script>
 
 </body>
 </html>
